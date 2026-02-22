@@ -92,6 +92,14 @@ a:hover { text-decoration: underline; }
 
 .hero { padding: 52px 0 26px 0; }
 
+.hero-copy {
+  margin-bottom: 12px;
+}
+
+.hero-card {
+  margin-left: 14px;
+}
+
 .hero-inner {
   display: grid;
   grid-template-columns: 1.4fr 0.9fr;
@@ -115,10 +123,12 @@ a:hover { text-decoration: underline; }
 }
 
 .hero-photo img {
-  width: 100%;
+  width: 280px;
+  max-width: 100%;
+  aspect-ratio: 4 / 5;
   height: auto;
-  aspect-ratio: 3 / 2;
   object-fit: cover;
+  object-position: center;
   border-radius: 12px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -127,13 +137,14 @@ a:hover { text-decoration: underline; }
 
 .hero-card {
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: var(--shadow);
 }
+
 
 
 .card-title {
