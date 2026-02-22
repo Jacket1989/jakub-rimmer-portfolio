@@ -1,11 +1,11 @@
-/* Simple portfolio renderer + theme toggle */
+const PRIVATE_NOTE = "Code and report are private due to course policy. High-level details available on request.";
 
 const projects = [
   {
     title: "FinWiz",
-    subtitle: "Backend + deployment (team project)",
+    subtitle: "Backend + deployment (academic team project, team of 4)",
     description:
-      "A project where I focused on backend delivery and operational reliability, including secure handling of user-facing inputs.",
+      "Academic project completed at the University of Pennsylvania. I focused on backend delivery and operational reliability, including secure handling of user inputs.",
     highlights: [
       "Developed backend and deployment components",
       "Implemented input validation and supported HTTPS/SSL usage",
@@ -13,44 +13,67 @@ const projects = [
       "Set up CI/CD to support dependable rollout"
     ],
     tech: ["Backend", "AWS", "Databases", "CI/CD", "Security"],
-    links: {
-      repo: "https://github.com/YOUR_GITHUB_USERNAME/finwiz",
-      report: "assets/finwiz-report.pdf"
-    }
+    note: PRIVATE_NOTE,
+    links: { repo: "", report: "" }
   },
   {
     title: "Distributed Search Engine",
-    subtitle: "Crawler + AWS integration (team project)",
+    subtitle: "Crawler + AWS integration (academic team project, team of 4)",
     description:
-      "I focused on the crawler and cloud integration, with an emphasis on reliability, testing, and engineering quality practices.",
+      "Academic project completed at the University of Pennsylvania. I focused on the crawler and AWS integration, with emphasis on reliability, testing, and observability.",
     highlights: [
       "Developed the crawler component and integrated it with AWS services",
       "Wrote integration tests to validate end-to-end behavior",
       "Participated in code reviews and improved maintainability",
       "Improved robustness and observability through defensive handling and logging"
     ],
-    tech: ["Java/Python", "AWS", "Distributed systems", "Testing", "Logging"],
-    links: {
-      repo: "https://github.com/YOUR_GITHUB_USERNAME/search-engine",
-      report: "assets/search-engine-report.pdf"
-    }
+    tech: ["Distributed systems", "AWS", "Testing", "Logging", "Code review"],
+    note: PRIVATE_NOTE,
+    links: { repo: "", report: "" }
+  },
+  {
+    title: "PennOS",
+    subtitle: "Educational OS in C (academic project)",
+    description:
+      "Academic project completed at the University of Pennsylvania. Implemented core OS functionality around processes, scheduling, and file operations.",
+    highlights: [
+      "Implemented process management system calls (spawn, wait, exit, kill)",
+      "Added scheduling controls (priorities, tick-based sleep)",
+      "Implemented file operations (open, read, write, lseek, chmod, unlink)",
+      "Integrated filesystem concepts including permissions and error handling"
+    ],
+    tech: ["C", "Operating systems", "Scheduling", "File systems"],
+    note: PRIVATE_NOTE,
+    links: { repo: "", report: "" }
+  },
+  {
+    title: "RISC-V CPU and Cache",
+    subtitle: "SystemVerilog (academic project, team of 2)",
+    description:
+      "Academic project completed at the University of Pennsylvania. Built RV32I datapath designs and integrated cache behavior for instruction and data access.",
+    highlights: [
+      "Designed datapath stages and pipeline concepts",
+      "Integrated cache behavior via a standard bus style interface",
+      "Validated functionality using automated testbenches",
+      "Documented design trade-offs and verification results"
+    ],
+    tech: ["SystemVerilog", "RISC-V", "Pipelining", "Verification"],
+    note: PRIVATE_NOTE,
+    links: { repo: "", report: "" }
   },
   {
     title: "Parallel Algorithmic Patterns in Java (Dissertation)",
     subtitle: "Algorithmic skeletons + benchmarking with JMH",
     description:
-      "Dissertation project focused on reusable algorithmic skeletons and evidence-based performance evaluation of sequential vs parallel implementations.",
+      "Dissertation project focused on reusable algorithmic skeletons and evidence-based performance evaluation of sequential versus parallel implementations.",
     highlights: [
       "Built reusable algorithmic skeletons to structure parallel patterns",
       "Benchmarked implementations using JMH to evaluate performance and scalability",
       "Validated correctness using unit tests",
-      "Compared concurrency approaches (for example fork-join, executors, virtual threads)"
+      "Compared concurrency approaches (fork-join, executors, virtual threads)"
     ],
     tech: ["Java", "JMH", "Concurrency", "Unit testing", "Performance"],
-    links: {
-      repo: "https://github.com/YOUR_GITHUB_USERNAME/parallel-patterns-java",
-      report: ""
-    }
+    links: { repo: "", report: "" }
   },
   {
     title: "Hackathons (PennApps and others)",
@@ -63,10 +86,7 @@ const projects = [
       "Delivered working features quickly in a team setting"
     ],
     tech: ["Authentication", "Security", "Teamwork", "Rapid delivery"],
-    links: {
-      repo: "https://github.com/YOUR_GITHUB_USERNAME",
-      report: ""
-    }
+    links: { repo: "https://github.com/jacket1989", report: "" }
   }
 ];
 
@@ -109,6 +129,11 @@ function renderProjects() {
     });
     card.appendChild(tags);
 
+    if (p.note) {
+      const note = createEl("p", "note", p.note);
+      card.appendChild(note);
+    }
+
     const actions = createEl("div", "actions");
 
     if (p.links?.repo) {
@@ -144,7 +169,8 @@ function initTheme() {
     setTheme(saved);
     return;
   }
-  const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+  const prefersLight =
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
   setTheme(prefersLight ? "light" : "dark");
 }
 
