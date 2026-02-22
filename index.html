@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jakub Rimmer | Portfolio</title>
+    <meta
+      name="description"
+      content="Jakub Rimmer — software engineering portfolio (backend, security, reliability)."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">Jakub Rimmer</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="btn btn-ghost" type="button" aria-label="Toggle theme">
+          Theme
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Backend, security, reliability.</h1>
+            <p class="lead">
+              Final-year Computer Science student (graduating 2026) focused on backend platforms,
+              secure data handling, and building dependable services.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn" href="#projects">View projects</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+
+            <div class="links-row" aria-label="Quick links">
+              <a id="emailLink" href="mailto:jakub.bugajski32@gmail.com">jakub.bugajski32@gmail.com</a>
+              <span class="sep" aria-hidden="true">•</span>
+              <a
+                href="https://www.linkedin.com/in/rimmerjakub/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <span class="sep" aria-hidden="true">•</span>
+              <a
+                href="https://github.com/YOUR_GITHUB_USERNAME"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-card" role="region" aria-label="Highlights">
+            <h2 class="card-title">Highlights</h2>
+            <ul class="bullets">
+              <li>Backend + cloud deployment experience (AWS).</li>
+              <li>Security-focused mindset (threat modelling, input validation, authentication).</li>
+              <li>Testing and quality (unit + integration tests, code reviews).</li>
+              <li>Performance measurement using JMH and benchmarking.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p class="muted">
+              A few pieces of work that best represent my backend, security, and performance interests.
+            </p>
+          </div>
+
+          <div id="projectsGrid" class="grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="skills" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Skills</h2>
+            <p class="muted">Focused on backend development, security fundamentals, and reliable delivery.</p>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Python</span>
+            <span class="chip">C/C++</span>
+            <span class="chip">SQL</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">REST APIs</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">AWS (EC2, RDS, S3)</span>
+            <span class="chip">Git</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Linux</span>
+            <span class="chip">Testing (unit, integration)</span>
+            <span class="chip">Security basics</span>
+            <span class="chip">JMH benchmarking</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>About</h2>
+          </div>
+
+          <div class="prose">
+            <p>
+              I enjoy building backend systems where correctness, security, and reliability matter.
+              I am especially interested in platforms that manage databases and customer data securely,
+              and in engineering practices that improve trust: defensive handling, logging, testing,
+              and clear operational ownership.
+            </p>
+            <p>
+              Recently, I have been researching parallel algorithmic patterns in Java, building reusable
+              algorithmic skeletons and benchmarking sequential vs parallel implementations with JMH.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contact</h2>
+            <p class="muted">Happy to share code samples, reports, or walk through design decisions.</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="label">Email</div>
+              <a href="mailto:jakub.bugajski32@gmail.com">jakub.bugajski32@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <div class="label">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/rimmerjakub/" target="_blank" rel="noreferrer">
+                linkedin.com/in/rimmerjakub
+              </a>
+            </div>
+            <div class="contact-item">
+              <div class="label">GitHub</div>
+              <a href="https://github.com/Jacket1989" target="_blank" rel="noreferrer">
+                github.com/Jacket1989
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <span class="muted">© <span id="year"></span> Jakub Rimmer</span>
+        <a class="muted" href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
