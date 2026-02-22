@@ -238,4 +238,6 @@ a:hover { text-decoration: underline; }
   .hero-side { align-items: center; }
   .hero-photo { max-width: 100%; }
   .hero-card { max-width: 100%; }
+  .hero-photo {justify-content: center;}
+  .hero-photo img {width: 260px;}
 }
