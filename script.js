@@ -1,4 +1,3 @@
-/* Simple portfolio renderer + theme toggle */
 
 const PRIVATE_NOTE =
   "Code and report are private due to course policy. High-level details available on request.";

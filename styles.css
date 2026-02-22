@@ -109,7 +109,7 @@ a:hover { text-decoration: underline; }
 
 .hero-photo {
   width: 100%;
-  max-width: 360px;
+  max-width: 420px;
   display: flex;
   justify-content: center;
 }
@@ -127,13 +127,14 @@ a:hover { text-decoration: underline; }
 
 .hero-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 360px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: var(--shadow);
 }
+
 
 .card-title {
   margin: 0 0 10px 0;
@@ -234,7 +235,7 @@ a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-photo { justify-content: center; }
-  .card { grid-column: span 12; }
+  .hero-side { align-items: center; }
+  .hero-photo { max-width: 100%; }
+  .hero-card { max-width: 100%; }
 }
