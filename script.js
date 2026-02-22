@@ -1,4 +1,7 @@
-const PRIVATE_NOTE = "Code and report are private due to course policy. High-level details available on request.";
+/* Simple portfolio renderer + theme toggle */
+
+const PRIVATE_NOTE =
+  "Code and report are private due to course policy. High-level details available on request.";
 
 const projects = [
   {
@@ -101,22 +104,18 @@ function renderProjects() {
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
 
+  grid.innerHTML = "";
+
   projects.forEach((p) => {
     const card = createEl("article", "card");
 
-    const title = createEl("h3", null, p.title);
-    card.appendChild(title);
+    card.appendChild(createEl("h3", null, p.title));
 
-    if (p.subtitle) {
-      const sub = createEl("p", "subtitle", p.subtitle);
-      card.appendChild(sub);
-    }
-
-    const desc = createEl("p", "desc", p.description);
-    card.appendChild(desc);
+    if (p.subtitle) card.appendChild(createEl("p", "subtitle", p.subtitle));
+    if (p.description) card.appendChild(createEl("p", "desc", p.description));
 
     const ul = document.createElement("ul");
-    p.highlights.forEach((h) => {
+    (p.highlights || []).forEach((h) => {
       const li = document.createElement("li");
       li.textContent = h;
       ul.appendChild(li);
@@ -124,19 +123,14 @@ function renderProjects() {
     card.appendChild(ul);
 
     const tags = createEl("div", "tags");
-    p.tech.forEach((t) => {
-      tags.appendChild(createEl("span", "tag", t));
-    });
+    (p.tech || []).forEach((t) => tags.appendChild(createEl("span", "tag", t)));
     card.appendChild(tags);
 
-    if (p.note) {
-      const note = createEl("p", "note", p.note);
-      card.appendChild(note);
-    }
+    if (p.note) card.appendChild(createEl("p", "note", p.note));
 
     const actions = createEl("div", "actions");
 
-    if (p.links?.repo) {
+    if (p.links && p.links.repo) {
       const repoBtn = createEl("a", "btn", "Repo");
       repoBtn.href = p.links.repo;
       repoBtn.target = "_blank";
@@ -144,7 +138,7 @@ function renderProjects() {
       actions.appendChild(repoBtn);
     }
 
-    if (p.links?.report) {
+    if (p.links && p.links.report) {
       const reportBtn = createEl("a", "btn btn-ghost", "Report");
       reportBtn.href = p.links.report;
       reportBtn.target = "_blank";
