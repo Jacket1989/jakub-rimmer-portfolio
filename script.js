@@ -1,94 +1,57 @@
-
-const PRIVATE_NOTE =
-  "Code and report are private due to course policy. High-level details available on request.";
+const PRIVATE_NOTE = "Code and report are private due to course policy. High-level details available on request.";
 
 const projects = [
   {
+    title: "Peer-to-Peer Search Engine",
+    subtitle: "Distributed crawling + indexing on AWS (team of 4)",
+    description:
+      "Designed and deployed a scalable web search engine supporting crawling, indexing, and ranking end to end.",
+    highlights: [
+      "Deployed on AWS (EC2, S3) in Java using a Flame RDD framework",
+      "Implemented indexing and ranking with TF-IDF and PageRank",
+      "Improved throughput with error logging and an in-memory URL cache, reaching 2 to 3 docs per second on 200,000+ pages"
+    ],
+    tech: ["Java", "AWS", "Distributed systems", "Performance"],
+    note: PRIVATE_NOTE,
+    links: { repo: "", report: "" }
+  },
+  {
     title: "FinWiz",
-    subtitle: "Backend + deployment (academic team project, team of 4)",
+    subtitle: "Backend + deployment (team of 4)",
     description:
-      "Academic project completed at the University of Pennsylvania. I focused on backend delivery and operational reliability, including secure handling of user inputs.",
+      "Full stack financial analytics app delivering dashboards and a portfolio simulator.",
     highlights: [
-      "Developed backend and deployment components",
-      "Implemented input validation and supported HTTPS/SSL usage",
-      "Worked with relational and NoSQL data stores in the stack",
-      "Set up CI/CD to support dependable rollout"
+      "Implemented backend and deployment workflow",
+      "Used PostgreSQL for core data with MongoDB caching",
+      "Shipped on AWS with CI/CD (GitHub Actions), SSL, and technical documentation"
     ],
-    tech: ["Backend", "AWS", "Databases", "CI/CD", "Security"],
+    tech: ["Node.js", "PostgreSQL", "MongoDB", "AWS", "CI/CD"],
     note: PRIVATE_NOTE,
     links: { repo: "", report: "" }
   },
   {
-    title: "Distributed Search Engine",
-    subtitle: "Crawler + AWS integration (academic team project, team of 4)",
+    title: "PennOS (UNIX-like OS Simulator)",
+    subtitle: "Operating systems project in C",
     description:
-      "Academic project completed at the University of Pennsylvania. I focused on the crawler and AWS integration, with emphasis on reliability, testing, and observability.",
+      "Educational OS project focused on core systems concepts and UNIX-style behavior.",
     highlights: [
-      "Developed the crawler component and integrated it with AWS services",
-      "Wrote integration tests to validate end-to-end behavior",
-      "Participated in code reviews and improved maintainability",
-      "Improved robustness and observability through defensive handling and logging"
+      "Engineered a UNIX-style OS in C with a shell, file system support, and process and job control, including signals and I/O redirection"
     ],
-    tech: ["Distributed systems", "AWS", "Testing", "Logging", "Code review"],
-    note: PRIVATE_NOTE,
-    links: { repo: "", report: "" }
-  },
-  {
-    title: "PennOS",
-    subtitle: "Educational OS in C (academic project)",
-    description:
-      "Academic project completed at the University of Pennsylvania. Implemented core OS functionality around processes, scheduling, and file operations.",
-    highlights: [
-      "Implemented process management system calls (spawn, wait, exit, kill)",
-      "Added scheduling controls (priorities, tick-based sleep)",
-      "Implemented file operations (open, read, write, lseek, chmod, unlink)",
-      "Integrated filesystem concepts including permissions and error handling"
-    ],
-    tech: ["C", "Operating systems", "Scheduling", "File systems"],
-    note: PRIVATE_NOTE,
-    links: { repo: "", report: "" }
-  },
-  {
-    title: "RISC-V CPU and Cache",
-    subtitle: "SystemVerilog (academic project, team of 2)",
-    description:
-      "Academic project completed at the University of Pennsylvania. Built RV32I datapath designs and integrated cache behavior for instruction and data access.",
-    highlights: [
-      "Designed datapath stages and pipeline concepts",
-      "Integrated cache behavior via a standard bus style interface",
-      "Validated functionality using automated testbenches",
-      "Documented design trade-offs and verification results"
-    ],
-    tech: ["SystemVerilog", "RISC-V", "Pipelining", "Verification"],
+    tech: ["C", "Operating systems", "File systems"],
     note: PRIVATE_NOTE,
     links: { repo: "", report: "" }
   },
   {
     title: "Parallel Algorithmic Patterns in Java (Dissertation)",
-    subtitle: "Algorithmic skeletons + benchmarking with JMH",
+    subtitle: "Reusable skeletons + benchmarking",
     description:
-      "Dissertation project focused on reusable algorithmic skeletons and evidence-based performance evaluation of sequential versus parallel implementations.",
+      "Dissertation focused on reusable algorithmic skeletons and evidence-based performance evaluation of sequential versus parallel implementations.",
     highlights: [
-      "Built reusable algorithmic skeletons to structure parallel patterns",
-      "Benchmarked implementations using JMH to evaluate performance and scalability",
-      "Validated correctness using unit tests",
-      "Compared concurrency approaches (fork-join, executors, virtual threads)"
+      "Implemented reusable parallel skeletons for reductions, divide-and-conquer, and branch-and-bound",
+      "Benchmarked scalability and performance against sequential baselines"
     ],
-    tech: ["Java", "JMH", "Concurrency", "Unit testing", "Performance"],
+    tech: ["Java", "Concurrency", "Benchmarking"],
     links: { repo: "", report: "" }
-  },
-  {
-    title: "Hackathons (PennApps and others)",
-    subtitle: "Authentication and rapid prototyping",
-    description:
-      "Hackathon projects where I implemented authentication and applied security thinking under tight delivery constraints.",
-    highlights: [
-      "Implemented authentication in hackathon prototypes",
-      "Applied threat modelling concepts from coursework to design decisions",
-      "Delivered working features quickly in a team setting"
-    ],
-    tech: ["Authentication", "Security", "Teamwork", "Rapid delivery"],
-    links: { repo: "https://github.com/jacket1989", report: "" }
   }
 ];
 

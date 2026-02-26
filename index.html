@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="Jakub Rimmer | Portfolio" />
+    <meta
+      property="og:description"
+      content="Software engineering portfolio: backend systems, databases, reliability, performance."
+    />
+    <meta property="og:type" content="website" />
+
     <title>Jakub Rimmer | Portfolio</title>
     <meta
       name="description"
-      content="Jakub Rimmer - software engineering portfolio (backend, security, reliability)."
+      content="Jakub Rimmer - software engineering portfolio focused on backend systems, databases, reliability, and performance."
     />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -32,45 +41,46 @@
     </header>
 
     <main id="top">
-        <section class="hero">
+      <section class="hero">
         <div class="container hero-inner">
-            <div class="hero-left">
+          <div class="hero-left">
             <div class="hero-copy">
-                <h1>Jakub Rimmer</h1>
-                <p class="lead">
-                Final-year Computer Science student (graduating 2026) focused on backend platforms,
-                secure data handling, and building dependable services.
-                </p>
+              <h1>Jakub Rimmer</h1>
+              <p class="lead">
+                Final-year Computer Science and Mathematics student (graduating 2026) focused on backend systems,
+                databases, reliability, and performance. Based in Edinburgh and relocating to Dublin for hybrid
+                roles.
+              </p>
 
-                <div class="cta-row">
+              <div class="cta-row">
                 <a class="btn" href="#projects">View projects</a>
                 <a class="btn btn-ghost" href="#contact">Get in touch</a>
-                </div>
+              </div>
             </div>
 
             <div class="hero-card" role="region" aria-label="Highlights">
-                <h2 class="card-title">Highlights</h2>
-                <ul class="bullets">
-                <li>4th-year Computer Science student at the University of Edinburgh (graduating May 2026).</li>
-                <li>Year-long exchange at the University of Pennsylvania (2024-2025).</li>
-                <li>Backend-oriented with a focus on reliability, security, and performance.</li>
-                <li>Dissertation: parallel algorithmic patterns in Java (benchmarking and scalability).</li>
-                </ul>
+              <h2 class="card-title">Highlights</h2>
+              <ul class="bullets">
+                <li>Final-year Computer Science and Mathematics at the University of Edinburgh (May 2026).</li>
+                <li>Year-long exchange at the University of Pennsylvania (2024 to 2025), selected as 1 of 4.</li>
+                <li>Experience with distributed crawling and indexing on AWS and database-backed web apps.</li>
+                <li>Dissertation on parallel algorithmic patterns in Java, benchmarking scalability.</li>
+              </ul>
             </div>
-            </div>
+          </div>
 
-            <div class="hero-photo" aria-label="Profile photo">
+          <div class="hero-photo" aria-label="Profile photo">
             <img src="assets/Jakub.png" alt="Jakub Rimmer" />
-            </div>
+          </div>
         </div>
-        </section>
+      </section>
 
       <section id="projects" class="section">
         <div class="container">
           <div class="section-head">
             <h2>Projects</h2>
             <p class="muted">
-              Selected work that represents my backend, security, and performance interests.
+              Selected work focused on data-intensive systems, databases, reliability, and performance.
             </p>
           </div>
 
@@ -82,7 +92,7 @@
         <div class="container">
           <div class="section-head">
             <h2>Skills</h2>
-            <p class="muted">Backend development, security fundamentals, and reliable delivery.</p>
+            <p class="muted">Backend development, database fundamentals, testing mindset, and reliable delivery.</p>
           </div>
 
           <div class="chips">
@@ -100,8 +110,8 @@
             <span class="chip">Docker</span>
             <span class="chip">Linux</span>
             <span class="chip">Testing (unit, integration)</span>
-            <span class="chip">Security basics</span>
             <span class="chip">JMH benchmarking</span>
+            <span class="chip">Security fundamentals</span>
           </div>
         </div>
       </section>
@@ -114,14 +124,14 @@
 
           <div class="prose">
             <p>
-              I enjoy building backend systems where correctness, security, and reliability matter. I am
-              especially interested in platforms that manage databases and customer data securely, and in
-              engineering practices that improve trust: defensive handling, logging, testing, and clear
-              operational ownership.
+              I enjoy building backend systems where correctness, reliability, and performance can be measured.
+              I am especially interested in database-backed platforms and developer tooling that help teams
+              understand and operate systems with confidence.
             </p>
             <p>
-              I also enjoy performance work, including benchmarking and reasoning about concurrency and
-              scalability trade-offs.
+              I like work that balances shipping with discipline: defensive handling, structured logging, testing,
+              and clear operational ownership. I also enjoy performance work and concurrency, including benchmarking
+              and reasoning about scalability trade-offs.
             </p>
           </div>
         </div>
@@ -139,17 +149,19 @@
               <div class="label">Email</div>
               <a href="mailto:jakub.bugajski32@gmail.com">jakub.bugajski32@gmail.com</a>
             </div>
+
             <div class="contact-item">
               <div class="label">LinkedIn</div>
               <a href="https://www.linkedin.com/in/rimmerjakub/" target="_blank" rel="noreferrer">
                 linkedin.com/in/rimmerjakub
               </a>
             </div>
+
             <div class="contact-item">
-              <div class="label">GitHub</div>
-              <a href="https://github.com/jacket1989" target="_blank" rel="noreferrer">
-                github.com/jacket1989
-              </a>
+              <div class="label">Code samples</div>
+              <div class="muted">
+                Available on request. Course projects are private due to policy.
+              </div>
             </div>
           </div>
         </div>
@@ -163,6 +175,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
